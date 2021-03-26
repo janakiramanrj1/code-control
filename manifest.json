@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name": "Code Control",
+	"version": "0.1",
+
+	"description": "Take control of the code running in your browser",
+
+	"content_scripts":
+	[
+		{
+			"matches": ["<all_urls>"],
+			"run_at": "document_start",
+			"js": ["./dist/code-control.js"]
+		}
+	],
+
+	"permissions":
+	[
+		"webNavigation",
+		"<all_urls>"
+	]
+}
